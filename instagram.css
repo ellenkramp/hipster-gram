@@ -6,13 +6,13 @@
     justify-content: center;
     flex-wrap: wrap;
     padding: 0px;
-    border: solid 5px;
 }
 
-img {
+.gallery-class img{
     width: 300px;
     opacity: 1;
     padding: 5px;
+    clip: square(10px, 50px, 50px, 10px);
 }
 
 .gallery-class img:hover {
@@ -21,9 +21,13 @@ img {
 }
 
 .enlarged {
-    background-color: black;
+    background-color: rgba(0,0,0,0.8);
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
     margin: auto;
-    border: 1px solid #888;
     box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
     cursor: pointer;
     top: 0;
@@ -34,8 +38,8 @@ img {
     height: 100%;
 }
 
-img.enlarged {
-    width: 1000px;
+.enlarged img{
+    width: 700px;
 }
 .enlarged.visible {
     visibility: visible;

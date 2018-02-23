@@ -15,20 +15,20 @@ body.appendChild(lightBoxDiv);
 body.appendChild(galleryDiv);
 lightBoxDiv.appendChild(lightBoxImg);
 
-
-for (var i = 0; i<gallery.length; i++) {
-    var pic = gallery[i];
+gallery.forEach(function(image) {
     var galImg = document.createElement('img');
-    galImg.src = pic.link;
+    galImg.src = image.link;
     galleryDiv.appendChild(galImg);
     galleryDiv.classList.add('gallery-class');
     galImg.addEventListener('click', lightBox);
-}
+});
+
 function lightBox() {
     lightBoxImg.setAttribute("src", this.src);
     lightBoxDiv.classList.toggle('visible');
     lightBoxImg.addEventListener('click', normalState);
 }
+
 function normalState() {
     lightBoxDiv.classList.toggle('visible');
 }
