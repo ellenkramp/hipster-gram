@@ -4,14 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="normalize.css">
     <link rel="stylesheet" type="text/css" href="instagram.css">
     <link href="https://fonts.googleapis.com/css?family=Pacifico|Raleway" rel="stylesheet">
     <title>Hipstergram</title>
 </head>
 <body>
-    <div class = "lightBox"></div>
-    <div class = "profile"></div>
-    <div class = "gallery"></div>
+    <div class = "lightBox">
+        <img class = "arrow" id = "left" type = "button">
+        <img class = "lightBoxImg">
+        <img class = "arrow" id = "right" type = "button">
+    </div>
+    <nav>
+        <img class = "logo" src = "http://files.softicons.com/download/toolbar-icons/mono-general-icons-3-by-custom-icon-design/ico/camera.ico" >
+        <div class = "line"> </div>
+        <h1>Hipstergram</h1>
+    </nav>
+    <div class = "profile">
+        <div>
+            <img class = "profile-pic" src="" />
+        </div>
+        <div class = "profile-text">
+            <div>
+                <h2 class = "handle"></h2>
+            </div>
+            <div class = "profile-stats">
+                <h4 class = "posts"></h4>
+                <h4 class = "followers"></h4>
+                <h4 class = "following"></h4>
+            </div>
+            <h4 class = "name">
+                <p class = "description"></p>
+            </h4>
+        </div>
+    </div>
+    <div class = "gallery-class"></div>
 <script src = "instagram.js"></script>   
 </body>
 </html>
