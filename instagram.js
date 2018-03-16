@@ -22,9 +22,9 @@ var gallery = [
         user2: "test comment"
         }
     },
-    {link: 'https://orig00.deviantart.net/160f/f/2010/118/8/5/pretty_nature_by_tylercuddlebutt.jpg'},
+    {link: 'https://c1.staticflickr.com/8/7323/13983947217_3e08940b74_b.jpg'},
     {link: 'https://wallpaper.wiki/wp-content/uploads/2017/05/wallpaper.wiki-Pretty-HD-Photo-Tumblr-PIC-WPE004194.jpg'},
-    {link: 'http://natbg.com/wp-content/uploads/2016/06/flowers-cotton-flower-pretty-nature-wallpaper-for-desktop.jpg'},
+    {link: 'https://i.pinimg.com/736x/8b/ec/42/8bec42f43d12d285808cc900d3f7c503.jpg'},
     {link: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRa9JNgXoDsIiCklFf4_hhUj_8CkkPjbDFERv-m-vrieo_9WZQbrw'}
 ];
 
@@ -73,6 +73,11 @@ gallery.forEach(function(image) {
 function lightBox() {
     lightBoxImg.setAttribute("src", this.src);
     lightBoxDiv.classList.toggle('visible');
+    rightArrow.addEventListener('click', function(){
+        var currentIndex = gallery.indexOf(gallery.link[this.src]);
+        var newIndex = currentIndex + 1;
+        lightBoxImg.setAttribute("src", gallery.link[newIndex]);
+    })
     lightBoxImg.addEventListener('click', normalState);
 }
 
